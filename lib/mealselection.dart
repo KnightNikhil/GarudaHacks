@@ -7,7 +7,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-String food = 'idli';
+String food = 'samosa';
 
 class MealSelection extends StatefulWidget {
   @override
@@ -30,8 +30,8 @@ class _MealSelectionState extends State<MealSelection> {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio:
-                        ((MediaQuery.of(context).size.height / 65) /
-                            (MediaQuery.of(context).size.width / 27))),
+                        ((MediaQuery.of(context).size.height / 100) /
+                            (MediaQuery.of(context).size.width / 30))),
                 itemBuilder: (context, index) {
                   return content['to'] > index
                       ? Container(
@@ -87,7 +87,7 @@ class _MealSelectionState extends State<MealSelection> {
                                             MediaQuery.of(context).size.width /
                                                 50),
                                     Text(
-                                        '${content['hits'][index]['recipe']['calories'].toStringAsFixed(1)} Kcl',
+                                        '${content['hits'][index]['recipe']['calories'].toStringAsFixed(1)}',
                                         style: TextStyle(
                                             fontSize: 14.0,
                                             color: Colors.black54,
@@ -259,10 +259,15 @@ class _MealSelectionState extends State<MealSelection> {
                     color: Colors.deepOrange,
                     size: 30.0,
                   ),
-                  Icon(
-                    Icons.sort,
-                    color: Colors.deepOrange,
-                    size: 30.0,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/meal_plan');
+                    },
+                    child: Icon(
+                      Icons.sort,
+                      color: Colors.deepOrange,
+                      size: 30.0,
+                    ),
                   ),
                 ],
               ),

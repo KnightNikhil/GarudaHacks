@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nuttical/model/height_slider.dart';
-import 'package:nuttical/model/BMI_Cal.dart' as bmical;
+import 'package:nutrical/model/height_slider.dart';
+import 'package:nutrical/model/BMI_Cal.dart' as bmical;
 
 class Your_Height extends StatefulWidget {
   @override

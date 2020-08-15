@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import 'package:nuttical/model/BMI_Cal.dart' as bmical;
+import 'package:nutrical/model/BMI_Cal.dart' as bmical;
 
 class BMI extends StatefulWidget {
   @override
@@ -112,7 +112,7 @@ class _BMIState extends State<BMI> {
             GestureDetector(
               onTap: () {
                 Navigator.pushNamedAndRemoveUntil(
-                    context, '/your_purpose', (route) => false);
+                    context, '/dashboard', (route) => false);
               },
               child: Container(
                 margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
