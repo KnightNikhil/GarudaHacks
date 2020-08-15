@@ -35,6 +35,8 @@ class MyApp extends StatelessWidget {
         '/your_weight': (context) => Your_Weight(),
         '/your_height': (context) => Your_Height(),
         '/bmi': (context) => BMI(),
+        '/meal_selection': (context) =>  MealSelection(),
+        
   
       },
     );
